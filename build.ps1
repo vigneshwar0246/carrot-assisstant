@@ -26,6 +26,7 @@ if ($LASTEXITCODE) { throw 'JAR creation failed.' }
 New-Item -ItemType Directory -Force $packageInput | Out-Null
 Copy-Item -Force $jarFile (Join-Path $packageInput 'jarvis.jar')
 Copy-Item -Force "$PSScriptRoot\scripts\voice-listener.ps1" (Join-Path $packageInput 'voice-listener.ps1')
+Copy-Item -Force "$PSScriptRoot\scripts\whisper-service.py" (Join-Path $packageInput 'whisper-service.py')
 $webInput = Join-Path $packageInput 'web'
 if (Test-Path $webInput) { Remove-Item -Recurse -Force $webInput }
 Copy-Item -Recurse "$PSScriptRoot\web" $webInput

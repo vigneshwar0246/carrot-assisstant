@@ -17,6 +17,9 @@
       </button>
       <nav aria-label="Primary navigation">
         <button class="nav-item active" data-panel="home">HOME</button>
+        <button class="nav-item" data-panel="tasks">TASKS</button>
+        <button class="nav-item" data-panel="memory">MEMORY</button>
+        <button class="nav-item" data-panel="system">SYSTEM</button>
         <button class="nav-item" data-panel="reminders">REMINDERS</button>
         <button class="nav-item" data-panel="logs">LOGS</button>
         <button class="nav-item" data-panel="settings">SETTINGS</button>
@@ -69,17 +72,18 @@
           </div>
         </div>
         <h1>CARROT</h1>
-        <p class="wake-copy"><span></span>SAY <b>CARROT</b> OR DOUBLE CLAP<span></span></p>
+        <p class="wake-copy"><span></span>SAY <b>CARROT</b> TO BEGIN<span></span></p>
       </section>
 
       <aside class="interaction-rail" aria-label="Assistant interaction">
         <div class="wake-control">
           <span>WAKE MODE</span>
           <div class="segmented" role="group" aria-label="Wake mode">
-            <button data-mode="carrot">CARROT</button><button data-mode="both" class="active">BOTH</button><button data-mode="clap">CLAP</button>
+            <button data-mode="carrot" class="active">CARROT</button><button data-mode="both">BOTH</button><button data-mode="clap">CLAP</button>
           </div>
         </div>
         <div class="transcript" id="transcript" aria-live="polite"></div>
+        <p class="live-caption" id="liveCaption">MICROPHONE ARMED · SAY CARROT</p>
         <canvas id="waveform" width="640" height="116" aria-label="Voice activity waveform"></canvas>
         <form id="commandForm" class="command-form">
           <label for="commandInput">TYPE A COMMAND</label>
@@ -88,6 +92,28 @@
         </form>
         <p class="hint" id="hint">Try “today”, “list reminders”, or “open PowerPoint”</p>
       </aside>
+    </section>
+
+    <section class="workspace-panel" id="tasksPanel" aria-labelledby="tasksTitle">
+      <div class="panel-heading"><div><span>PERSISTENT WORK QUEUE</span><h2 id="tasksTitle">TASKS</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="reminder-grid" id="taskGrid"></div>
+    </section>
+
+    <section class="workspace-panel" id="memoryPanel" aria-labelledby="memoryTitle">
+      <div class="panel-heading"><div><span>USER-APPROVED LOCAL CONTEXT</span><h2 id="memoryTitle">MEMORY</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="reminder-grid" id="memoryGrid"></div>
+    </section>
+
+    <section class="workspace-panel" id="systemPanel" aria-labelledby="systemTitle">
+      <div class="panel-heading"><div><span>LIVE WINDOWS TELEMETRY</span><h2 id="systemTitle">SYSTEM</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="telemetry-grid">
+        <article><span>CPU LOAD</span><strong id="cpuMetric">--</strong><i><b id="cpuBar"></b></i></article>
+        <article><span>MEMORY</span><strong id="memoryMetric">--</strong><i><b id="memoryBar"></b></i></article>
+        <article><span>SYSTEM DISK</span><strong id="diskMetric">--</strong><i><b id="diskBar"></b></i></article>
+        <article><span>UPTIME</span><strong id="uptimeMetric">--</strong></article>
+        <article><span>PROCESSES</span><strong id="processMetric">--</strong></article>
+        <article><span>NETWORK</span><strong id="networkMetric">--</strong></article>
+      </div>
     </section>
 
     <section class="workspace-panel" id="remindersPanel" aria-labelledby="remindersTitle">
@@ -105,11 +131,13 @@
       <div class="settings-layout">
         <div><h3>WAKE BEHAVIOUR</h3><p>Choose how Carrot waits for you. “Both” keeps the Carrot voice wake word and double-clap detection active.</p></div>
         <div class="mode-cards">
-          <button data-mode="carrot"><strong>CARROT</strong><span>Primary voice wake word</span></button>
-          <button data-mode="both" class="active"><strong>BOTH</strong><span>Voice + double clap</span></button>
+          <button data-mode="carrot" class="active"><strong>CARROT</strong><span>Primary voice wake word</span></button>
+          <button data-mode="both"><strong>BOTH</strong><span>Voice + double clap</span></button>
           <button data-mode="clap"><strong>DOUBLE CLAP</strong><span>Sound wake only</span></button>
         </div>
         <div class="privacy-note"><strong>LOCAL BY DESIGN</strong><p>Commands, speech recognition, and reminder data stay on this Windows PC.</p></div>
+        <div class="provider-note"><strong>LOCAL AI PROVIDER</strong><p id="providerStatus">Checking Ollama…</p></div>
+        <div class="control-row"><button data-control="wake">WAKE</button><button data-control="sleep">SLEEP</button><button class="danger" data-control="shutdown">SHUTDOWN VOICE</button></div>
       </div>
     </section>
   </main>

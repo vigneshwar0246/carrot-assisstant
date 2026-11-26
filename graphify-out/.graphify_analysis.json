@@ -1,0 +1,330 @@
+{
+  "communities": {
+    "0": [
+      "audioformat",
+      "audiosystem",
+      "awt",
+      "bufferedreader",
+      "com_sun_net_httpserver_httpserver",
+      "datetimeformatter",
+      "datetimeparseexception",
+      "executors",
+      "file",
+      "formatstyle",
+      "inetsocketaddress",
+      "inputstreamreader",
+      "ioexception",
+      "java_awt_event_windowevent",
+      "java_nio_channels_filechannel",
+      "java_nio_channels_filelock",
+      "list",
+      "matcher",
+      "outputstream",
+      "override",
+      "scheduledexecutorservice",
+      "src_com_jarvis_assist_jarvisapp",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136_windowclosing",
+      "standardcharsets",
+      "swing",
+      "targetdataline",
+      "time",
+      "timeunit",
+      "uri",
+      "util",
+      "windowadapter"
+    ],
+    "1": [
+      "image",
+      "jframe",
+      "jtextarea",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_acquirelock",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_conversation",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_jarvisapp",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_makeicon",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_officecandidates",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_showframe",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_shutdown",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startapproved",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startclaplistener",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startfirstfound",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_startwebserver",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_voicescript",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsclap",
+      "trayicon"
+    ],
+    "2": [
+      "web_app",
+      "web_app_coreparallax",
+      "web_app_drawambient",
+      "web_app_drawambient_circuit",
+      "web_app_drawambient_frame",
+      "web_app_drawambient_resize",
+      "web_app_drawwave",
+      "web_app_drawwave_frame",
+      "web_app_esc",
+      "web_app_getstatus",
+      "web_app_render",
+      "web_app_renderlogs",
+      "web_app_renderreminders",
+      "web_app_rendertranscript",
+      "web_app_sendcommand",
+      "web_app_setmode",
+      "web_app_showpanel",
+      "web_app_state",
+      "web_app_toast",
+      "web_app_updateclock"
+    ],
+    "3": [
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_checkduereminders",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_confirmation",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_help",
+      "src_com_jarvis_assist_jarvisapp_reminder",
+      "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_listall",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_load",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_reminderstore",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_schedulefor",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_snapshot",
+      "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "test_com_jarvis_assist_jarvisapptest_jarvisapptest",
+      "test_com_jarvis_assist_jarvisapptest_jarvisapptest_check",
+      "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main"
+    ],
+    "4": [
+      "readme_approved_app_launching",
+      "readme_carrot_local_assistant",
+      "readme_local_command_center",
+      "readme_local_only_operation",
+      "readme_multimodal_activation",
+      "readme_packaged_windows_startup",
+      "readme_reminder_management",
+      "web_index_assistant_core",
+      "web_index_carrot_command_center",
+      "web_index_command_interaction",
+      "web_index_command_log_workspace",
+      "web_index_local_by_design",
+      "web_index_reminders_workspace",
+      "web_index_settings_workspace",
+      "web_index_system_status",
+      "web_index_wake_mode_control"
+    ],
+    "5": [
+      "com_sun_net_httpserver_httpexchange",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_json",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_readbody",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_webroot"
+    ],
+    "6": [
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsvoice",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_both",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_carrot",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_clap",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_parse",
+      "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_wakemode"
+    ],
+    "7": [
+      "java_util_regex_pattern",
+      "src_com_jarvis_assist_jarvisapp_commandparser",
+      "src_com_jarvis_assist_jarvisapp_commandparser_commandparser",
+      "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "src_com_jarvis_assist_jarvisapp_commandparser_parsetime",
+      "src_com_jarvis_assist_jarvisapp_commandparser_requiretext"
+    ],
+    "8": [
+      "files",
+      "localdate",
+      "localdatetime",
+      "test_com_jarvis_assist_jarvisapptest"
+    ],
+    "9": [
+      "build"
+    ],
+    "10": [
+      "scripts_install_startup"
+    ],
+    "11": [
+      "scripts_voice_listener"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0625,
+    "1": 0.12701612903225806,
+    "2": 0.16842105263157894,
+    "3": 0.23391812865497075,
+    "4": 0.16666666666666666,
+    "5": 0.42857142857142855,
+    "6": 0.2857142857142857,
+    "7": 0.4666666666666667,
+    "8": 0.5,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "label": "JarvisApp",
+      "degree": 46
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "label": "ReminderStore",
+      "degree": 13
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminder",
+      "label": "Reminder",
+      "degree": 11
+    },
+    {
+      "id": "web_index_carrot_command_center",
+      "label": "Carrot Local AI Assistant Command Center",
+      "degree": 9
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "label": "WakeMode",
+      "degree": 8
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "label": "CommandParser",
+      "degree": 6
+    },
+    {
+      "id": "readme_carrot_local_assistant",
+      "label": "Carrot Local Assistant",
+      "degree": 6
+    },
+    {
+      "id": "web_app_render",
+      "label": "render()",
+      "degree": 5
+    },
+    {
+      "id": "web_app_esc",
+      "label": "esc()",
+      "degree": 4
+    },
+    {
+      "id": "web_app_getstatus",
+      "label": "getStatus()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Local Command-Center Frontend",
+      "target": "Carrot Local AI Assistant Command Center",
+      "source_files": [
+        "README.md",
+        "web/index.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link; peripheral node `Local Command-Center Frontend` unexpectedly reaches hub `Carrot Local AI Assistant Command Center`"
+    },
+    {
+      "source": "Local-Only Operation",
+      "target": "Local by Design",
+      "source_files": [
+        "README.md",
+        "web/index.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Reminder Management",
+      "target": "Reminders Workspace",
+      "source_files": [
+        "README.md",
+        "web/index.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Voice, Wake-Word, Clap, and Typed Activation",
+      "target": "Typed Command and Voice Interaction",
+      "source_files": [
+        "README.md",
+        "web/index.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Voice, Wake-Word, Clap, and Typed Activation",
+      "target": "Wake Mode Control",
+      "source_files": [
+        "README.md",
+        "web/index.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `JarvisApp` connect `Community 1` to `Community 0`, `Community 3`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.336) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `CARROT`, `CLAP`, `BOTH` to the rest of the system?",
+      "why": "8 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0625 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ReminderStore` connect `Community 3` to `Community 0`, `Community 1`?",
+      "why": "High betweenness centrality (0.054) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12701612903225806 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `WakeMode` connect `Community 6` to `Community 1`?",
+      "why": "High betweenness centrality (0.052) - this node is a cross-community bridge."
+    }
+  ]
+}

@@ -1,0 +1,5442 @@
+{
+  "nodes": [
+    {
+      "id": "build",
+      "label": "build.ps1",
+      "file_type": "code",
+      "source_file": "build.ps1",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_install_startup",
+      "label": "install-startup.ps1",
+      "file_type": "code",
+      "source_file": "scripts/install-startup.ps1",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_voice_listener",
+      "label": "voice-listener.ps1",
+      "file_type": "code",
+      "source_file": "scripts/voice-listener.ps1",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp",
+      "label": "JarvisApp.java",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "label": "JarvisApp",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L35",
+      "metadata": {
+        "type_path": "JarvisApp"
+      },
+      "_java_type": {
+        "path": "JarvisApp",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "trayicon",
+      "label": "TrayIcon",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "jframe",
+      "label": "JFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "jtextarea",
+      "label": "JTextArea",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_jarvisapp",
+      "label": ".JarvisApp()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L61",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "label": ".main()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L65",
+      "metadata": {
+        "arity": 1,
+        "signature": "String[]",
+        "unresolved_calls": [
+          {
+            "callee": "now",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 0,
+            "line": "L70",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "isSupported",
+            "receiver_type": "SystemTray",
+            "lang": "java",
+            "arity": 0,
+            "line": "L73",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "showMessageDialog",
+            "receiver_type": "JOptionPane",
+            "lang": "java",
+            "arity": 4,
+            "line": "L74",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "invokeLater",
+            "receiver_type": "SwingUtilities",
+            "lang": "java",
+            "arity": 1,
+            "line": "L83",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_acquirelock",
+      "label": ".acquireLock()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L90",
+      "metadata": {
+        "arity": 1,
+        "signature": "Path",
+        "unresolved_calls": [
+          {
+            "callee": "createDirectories",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L91",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "open",
+            "receiver_type": "FileChannel",
+            "lang": "java",
+            "arity": 3,
+            "line": "L92",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "tryLock",
+            "receiver_type": "FileChannel",
+            "lang": "java",
+            "arity": 0,
+            "line": "L93",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "label": ".startUi()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L97",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "addActionListener",
+            "receiver_type": "MenuItem",
+            "lang": "java",
+            "arity": 1,
+            "line": "L104",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "add",
+            "receiver_type": "PopupMenu",
+            "lang": "java",
+            "arity": 1,
+            "line": "L114",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "addSeparator",
+            "receiver_type": "PopupMenu",
+            "lang": "java",
+            "arity": 0,
+            "line": "L116",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setImageAutoSize",
+            "receiver_type": "TrayIcon",
+            "lang": "java",
+            "arity": 1,
+            "line": "L120",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "addActionListener",
+            "receiver_type": "TrayIcon",
+            "lang": "java",
+            "arity": 1,
+            "line": "L121",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getSystemTray",
+            "receiver_type": "SystemTray",
+            "lang": "java",
+            "arity": 0,
+            "line": "L122",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "displayMessage",
+            "receiver_type": "TrayIcon",
+            "lang": "java",
+            "arity": 3,
+            "line": "L126",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "label": ".buildFrame()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L133",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "setDefaultCloseOperation",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 1,
+            "line": "L135",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "addWindowListener",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 1,
+            "line": "L136",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setEditable",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L140",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setLineWrap",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L141",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setWrapStyleWord",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L142",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setFont",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L143",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L144",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setFont",
+            "receiver_type": "JTextField",
+            "lang": "java",
+            "arity": 1,
+            "line": "L147",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getText",
+            "receiver_type": "JTextField",
+            "lang": "java",
+            "arity": 0,
+            "line": "L150",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "now",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 0,
+            "line": "L153",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setText",
+            "receiver_type": "JTextField",
+            "lang": "java",
+            "arity": 1,
+            "line": "L154",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "requestFocusInWindow",
+            "receiver_type": "JTextField",
+            "lang": "java",
+            "arity": 0,
+            "line": "L155",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "addActionListener",
+            "receiver_type": "JTextField",
+            "lang": "java",
+            "arity": 1,
+            "line": "L157",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "addActionListener",
+            "receiver_type": "JButton",
+            "lang": "java",
+            "arity": 1,
+            "line": "L158",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setBorder",
+            "receiver_type": "JPanel",
+            "lang": "java",
+            "arity": 1,
+            "line": "L161",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "createEmptyBorder",
+            "receiver_type": "BorderFactory",
+            "lang": "java",
+            "arity": 4,
+            "line": "L161",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "add",
+            "receiver_type": "JPanel",
+            "lang": "java",
+            "arity": 2,
+            "line": "L162",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "add",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 2,
+            "line": "L164",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "pack",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 0,
+            "line": "L166",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setLocationRelativeTo",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 1,
+            "line": "L167",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136",
+      "label": "WindowAdapter",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L136",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136_windowclosing",
+      "label": ".windowClosing()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L137",
+      "metadata": {
+        "arity": 1,
+        "signature": "WindowEvent"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "override",
+      "label": "Override",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_showframe",
+      "label": ".showFrame()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L170",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "setVisible",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 1,
+            "line": "L171",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setState",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 1,
+            "line": "L172",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "toFront",
+            "receiver_type": "JFrame",
+            "lang": "java",
+            "arity": 0,
+            "line": "L173",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "label": ".openDashboard()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L176",
+      "metadata": {
+        "arity": 1,
+        "signature": "boolean",
+        "unresolved_calls": [
+          {
+            "callee": "isDesktopSupported",
+            "receiver_type": "Desktop",
+            "lang": "java",
+            "arity": 0,
+            "line": "L177",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "currentTimeMillis",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L178",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getDesktop",
+            "receiver_type": "Desktop",
+            "lang": "java",
+            "arity": 0,
+            "line": "L182",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "create",
+            "receiver_type": "URI",
+            "lang": "java",
+            "arity": 1,
+            "line": "L182",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "label": ".append()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L188",
+      "metadata": {
+        "arity": 2,
+        "signature": "String,String",
+        "unresolved_calls": [
+          {
+            "callee": "append",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L189",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setCaretPosition",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L190",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getDocument",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 0,
+            "line": "L190",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L193",
+      "metadata": {
+        "arity": 2,
+        "signature": "String,LocalDateTime",
+        "unresolved_calls": [
+          {
+            "callee": "ofLocalizedDate",
+            "receiver_type": "DateTimeFormatter",
+            "lang": "java",
+            "arity": 1,
+            "line": "L203",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "compile",
+            "receiver_type": "Pattern",
+            "lang": "java",
+            "arity": 1,
+            "line": "L211",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "matches",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 0,
+            "line": "L212",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "parseInt",
+            "receiver_type": "Integer",
+            "lang": "java",
+            "arity": 1,
+            "line": "L213",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "group",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 1,
+            "line": "L213",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_confirmation",
+      "label": ".confirmation()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L240",
+      "metadata": {
+        "arity": 1,
+        "signature": "Reminder"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_help",
+      "label": ".help()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L247",
+      "metadata": {
+        "arity": 0,
+        "signature": ""
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "label": ".openApprovedApp()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L262",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "of",
+            "receiver_type": "List",
+            "lang": "java",
+            "arity": 2,
+            "line": "L274",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 5,
+            "line": "L275",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getenv",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L275",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_officecandidates",
+      "label": ".officeCandidates()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L283",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "of",
+            "receiver_type": "List",
+            "lang": "java",
+            "arity": 4,
+            "line": "L284",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 5,
+            "line": "L285",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getenv",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L285",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 4,
+            "line": "L287",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startfirstfound",
+      "label": ".startFirstFound()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L291",
+      "metadata": {
+        "arity": 2,
+        "signature": "List,String",
+        "unresolved_calls": [
+          {
+            "callee": "isRegularFile",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L293",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startapproved",
+      "label": ".startApproved()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L300",
+      "metadata": {
+        "arity": 2,
+        "signature": "String,String"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "label": ".processCommand()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L309",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "now",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 0,
+            "line": "L311",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "label": ".recordConversation()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L316",
+      "metadata": {
+        "arity": 2,
+        "signature": "String,String",
+        "unresolved_calls": [
+          {
+            "callee": "now",
+            "receiver_type": "LocalTime",
+            "lang": "java",
+            "arity": 0,
+            "line": "L317",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startwebserver",
+      "label": ".startWebServer()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L321",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "create",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 2,
+            "line": "L322",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getAddress",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 0,
+            "line": "L323",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "createContext",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 2,
+            "line": "L324",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setExecutor",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 1,
+            "line": "L325",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "newFixedThreadPool",
+            "receiver_type": "Executors",
+            "lang": "java",
+            "arity": 2,
+            "line": "L325",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "start",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 0,
+            "line": "L330",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "label": ".serveHttp()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L333",
+      "metadata": {
+        "arity": 1,
+        "signature": "HttpExchange",
+        "unresolved_calls": [
+          {
+            "callee": "getRequestURI",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L335",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getRequestMethod",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L336",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_readbody",
+      "label": ".readBody()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L372",
+      "metadata": {
+        "arity": 1,
+        "signature": "HttpExchange",
+        "unresolved_calls": [
+          {
+            "callee": "getRequestBody",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L373",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "label": ".serveStatic()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L378",
+      "metadata": {
+        "arity": 2,
+        "signature": "HttpExchange,String",
+        "unresolved_calls": [
+          {
+            "callee": "isRegularFile",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L382",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "readAllBytes",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L390",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getResponseHeaders",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L391",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "sendResponseHeaders",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 2,
+            "line": "L393",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getResponseBody",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L394",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "write",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L394",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_webroot",
+      "label": ".webRoot()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L397",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "getProperty",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 1,
+            "line": "L398",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 1,
+            "line": "L399",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "label": ".send()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L403",
+      "metadata": {
+        "arity": 4,
+        "signature": "HttpExchange,int,String,String",
+        "unresolved_calls": [
+          {
+            "callee": "getResponseHeaders",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L405",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "sendResponseHeaders",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 2,
+            "line": "L408",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getResponseBody",
+            "receiver_type": "HttpExchange",
+            "lang": "java",
+            "arity": 0,
+            "line": "L409",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "write",
+            "receiver_type": "JTextArea",
+            "lang": "java",
+            "arity": 1,
+            "line": "L409",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "label": ".statusJson()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L412",
+      "metadata": {
+        "arity": 0,
+        "signature": ""
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_json",
+      "label": ".json()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L437",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "format",
+            "receiver_type": "String",
+            "lang": "java",
+            "arity": 2,
+            "line": "L448",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_checkduereminders",
+      "label": ".checkDueReminders()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L456",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "now",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 0,
+            "line": "L458",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "invokeLater",
+            "receiver_type": "SwingUtilities",
+            "lang": "java",
+            "arity": 1,
+            "line": "L461",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "displayMessage",
+            "receiver_type": "TrayIcon",
+            "lang": "java",
+            "arity": 3,
+            "line": "L461",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "label": ".startVoiceListener()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L468",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "isRegularFile",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L470",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_voicescript",
+      "label": ".voiceScript()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L496",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "getProperty",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 1,
+            "line": "L497",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 1,
+            "line": "L498",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 2,
+            "line": "L499",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "label": ".receiveVoice()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L502",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "currentTimeMillis",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L503",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getDecoder",
+            "receiver_type": "Base64",
+            "lang": "java",
+            "arity": 0,
+            "line": "L506",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "compile",
+            "receiver_type": "Pattern",
+            "lang": "java",
+            "arity": 1,
+            "line": "L510",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "matches",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 0,
+            "line": "L512",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "group",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 1,
+            "line": "L516",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "invokeLater",
+            "receiver_type": "SwingUtilities",
+            "lang": "java",
+            "arity": 1,
+            "line": "L520",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_startclaplistener",
+      "label": ".startClapListener()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L544",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "getTargetDataLine",
+            "receiver_type": "AudioSystem",
+            "lang": "java",
+            "arity": 1,
+            "line": "L547",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "currentThread",
+            "receiver_type": "Thread",
+            "lang": "java",
+            "arity": 0,
+            "line": "L556",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "max",
+            "receiver_type": "Math",
+            "lang": "java",
+            "arity": 2,
+            "line": "L563",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "abs",
+            "receiver_type": "Math",
+            "lang": "java",
+            "arity": 1,
+            "line": "L563",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "sqrt",
+            "receiver_type": "Math",
+            "lang": "java",
+            "arity": 1,
+            "line": "L565",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "currentTimeMillis",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L567",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "label": ".registerClap()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L588",
+      "metadata": {
+        "arity": 1,
+        "signature": "long"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "label": ".speak()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L604",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "currentTimeMillis",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L605",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "max",
+            "receiver_type": "Math",
+            "lang": "java",
+            "arity": 2,
+            "line": "L605",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "min",
+            "receiver_type": "Math",
+            "lang": "java",
+            "arity": 2,
+            "line": "L605",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "currentThread",
+            "receiver_type": "Thread",
+            "lang": "java",
+            "arity": 0,
+            "line": "L615",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_shutdown",
+      "label": ".shutdown()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L622",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "stop",
+            "receiver_type": "HttpServer",
+            "lang": "java",
+            "arity": 1,
+            "line": "L625",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getSystemTray",
+            "receiver_type": "SystemTray",
+            "lang": "java",
+            "arity": 0,
+            "line": "L626",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "release",
+            "receiver_type": "FileLock",
+            "lang": "java",
+            "arity": 0,
+            "line": "L628",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "close",
+            "receiver_type": "FileChannel",
+            "lang": "java",
+            "arity": 0,
+            "line": "L629",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "exit",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 1,
+            "line": "L631",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_makeicon",
+      "label": ".makeIcon()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L634",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "createGraphics",
+            "receiver_type": "java.awt.image.BufferedImage",
+            "lang": "java",
+            "arity": 0,
+            "line": "L637",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setRenderingHint",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 2,
+            "line": "L638",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setColor",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 1,
+            "line": "L639",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "fillOval",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 4,
+            "line": "L640",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "setFont",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 1,
+            "line": "L642",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "drawString",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 3,
+            "line": "L643",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "dispose",
+            "receiver_type": "Graphics2D",
+            "lang": "java",
+            "arity": 0,
+            "line": "L644",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_java_ret": "Image",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "image",
+      "label": "Image",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "label": "Arguments",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L648",
+      "metadata": {
+        "type_path": "JarvisApp.Arguments"
+      },
+      "_java_type": {
+        "path": "JarvisApp.Arguments",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "label": ".parse()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L649",
+      "metadata": {
+        "arity": 1,
+        "signature": "String[]",
+        "unresolved_calls": [
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 2,
+            "line": "L650",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getenv",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 0,
+            "line": "L650",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getProperty",
+            "receiver_type": "System",
+            "lang": "java",
+            "arity": 1,
+            "line": "L650",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Path",
+            "lang": "java",
+            "arity": 1,
+            "line": "L653",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_java_ret": "Arguments",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_conversation",
+      "label": "Conversation",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L661",
+      "metadata": {
+        "type_path": "JarvisApp.Conversation"
+      },
+      "_java_type": {
+        "path": "JarvisApp.Conversation",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "label": "WakeMode",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L663",
+      "metadata": {
+        "type_path": "JarvisApp.WakeMode"
+      },
+      "_java_type": {
+        "path": "JarvisApp.WakeMode",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_carrot",
+      "label": "CARROT",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_clap",
+      "label": "CLAP",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_both",
+      "label": "BOTH",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_wakemode",
+      "label": ".WakeMode()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L666",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsvoice",
+      "label": ".allowsVoice()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L667",
+      "metadata": {
+        "arity": 0,
+        "signature": ""
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsclap",
+      "label": ".allowsClap()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L668",
+      "metadata": {
+        "arity": 0,
+        "signature": ""
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_parse",
+      "label": ".parse()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L669",
+      "metadata": {
+        "arity": 1,
+        "signature": "String"
+      },
+      "_java_ret": "WakeMode",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminder",
+      "label": "Reminder",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L680",
+      "metadata": {
+        "type_path": "Reminder"
+      },
+      "_java_type": {
+        "path": "Reminder",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "label": "CommandParser",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L682",
+      "metadata": {
+        "type_path": "CommandParser"
+      },
+      "_java_type": {
+        "path": "CommandParser",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser_commandparser",
+      "label": ".CommandParser()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L688",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "label": ".parseReminder()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L690",
+      "metadata": {
+        "arity": 2,
+        "signature": "String,LocalDateTime",
+        "unresolved_calls": [
+          {
+            "callee": "matcher",
+            "receiver_type": "Pattern",
+            "lang": "java",
+            "arity": 1,
+            "line": "L691",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "matches",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 0,
+            "line": "L692",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "group",
+            "receiver_type": "Matcher",
+            "lang": "java",
+            "arity": 1,
+            "line": "L693",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "randomUUID",
+            "receiver_type": "UUID",
+            "lang": "java",
+            "arity": 0,
+            "line": "L696",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "parse",
+            "receiver_type": "LocalDate",
+            "lang": "java",
+            "arity": 1,
+            "line": "L703",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 2,
+            "line": "L711",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_java_ret": "Reminder",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser_requiretext",
+      "label": ".requireText()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L716",
+      "metadata": {
+        "arity": 1,
+        "signature": "String"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_commandparser_parsetime",
+      "label": ".parseTime()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L722",
+      "metadata": {
+        "arity": 1,
+        "signature": "String",
+        "unresolved_calls": [
+          {
+            "callee": "parse",
+            "receiver_type": "LocalTime",
+            "lang": "java",
+            "arity": 2,
+            "line": "L725",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "ofPattern",
+            "receiver_type": "DateTimeFormatter",
+            "lang": "java",
+            "arity": 1,
+            "line": "L727",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "label": "ReminderStore",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L734",
+      "metadata": {
+        "type_path": "ReminderStore"
+      },
+      "_java_type": {
+        "path": "ReminderStore",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "com.sun.net.httpserver.HttpExchange",
+          "com.sun.net.httpserver.HttpServer",
+          "javax.sound.sampled.AudioFormat",
+          "javax.sound.sampled.AudioSystem",
+          "javax.sound.sampled.TargetDataLine",
+          "javax.swing.*",
+          "java.awt.*",
+          "java.awt.event.WindowAdapter",
+          "java.awt.event.WindowEvent",
+          "java.io.BufferedReader",
+          "java.io.IOException",
+          "java.io.InputStreamReader",
+          "java.io.OutputStream",
+          "java.net.InetSocketAddress",
+          "java.net.URI",
+          "java.nio.channels.FileChannel",
+          "java.nio.channels.FileLock",
+          "java.nio.charset.StandardCharsets",
+          "java.nio.file.*",
+          "java.time.*",
+          "java.time.format.DateTimeFormatter",
+          "java.time.format.DateTimeParseException",
+          "java.time.format.FormatStyle",
+          "java.util.List",
+          "java.util.*",
+          "java.util.concurrent.Executors",
+          "java.util.concurrent.ScheduledExecutorService",
+          "java.util.concurrent.TimeUnit",
+          "java.util.regex.Matcher",
+          "java.util.regex.Pattern"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_reminderstore",
+      "label": ".ReminderStore()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L738",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "label": ".add()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L743",
+      "metadata": {
+        "arity": 1,
+        "signature": "Reminder"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_snapshot",
+      "label": ".snapshot()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L748",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "copyOf",
+            "receiver_type": "List",
+            "lang": "java",
+            "arity": 1,
+            "line": "L749",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_schedulefor",
+      "label": ".scheduleFor()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L752",
+      "metadata": {
+        "arity": 1,
+        "signature": "LocalDate",
+        "unresolved_calls": [
+          {
+            "callee": "comparing",
+            "receiver_type": "Comparator",
+            "lang": "java",
+            "arity": 1,
+            "line": "L755",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "ofLocalizedTime",
+            "receiver_type": "DateTimeFormatter",
+            "lang": "java",
+            "arity": 1,
+            "line": "L760",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_listall",
+      "label": ".listAll()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L766",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "ofLocalizedTime",
+            "receiver_type": "DateTimeFormatter",
+            "lang": "java",
+            "arity": 1,
+            "line": "L774",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "label": ".delete()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L780",
+      "metadata": {
+        "arity": 1,
+        "signature": "int"
+      },
+      "_java_ret": "Reminder",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "label": ".snooze()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L789",
+      "metadata": {
+        "arity": 3,
+        "signature": "Reminder,LocalDateTime,int",
+        "unresolved_calls": [
+          {
+            "callee": "randomUUID",
+            "receiver_type": "UUID",
+            "lang": "java",
+            "arity": 0,
+            "line": "L794",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_java_ret": "Reminder",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "label": ".dueAt()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L801",
+      "metadata": {
+        "arity": 1,
+        "signature": "LocalDateTime",
+        "unresolved_calls": [
+          {
+            "callee": "of",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 2,
+            "line": "L804",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_load",
+      "label": ".load()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L822",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "exists",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L823",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "readAllLines",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 2,
+            "line": "L825",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "fromString",
+            "receiver_type": "UUID",
+            "lang": "java",
+            "arity": 1,
+            "line": "L830",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "parseBoolean",
+            "receiver_type": "Boolean",
+            "lang": "java",
+            "arity": 1,
+            "line": "L830",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "parse",
+            "receiver_type": "LocalDate",
+            "lang": "java",
+            "arity": 1,
+            "line": "L831",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "parse",
+            "receiver_type": "LocalTime",
+            "lang": "java",
+            "arity": 1,
+            "line": "L831",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getDecoder",
+            "receiver_type": "Base64",
+            "lang": "java",
+            "arity": 0,
+            "line": "L832",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L840",
+      "metadata": {
+        "arity": 0,
+        "signature": "",
+        "unresolved_calls": [
+          {
+            "callee": "createDirectories",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L841",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "join",
+            "receiver_type": "String",
+            "lang": "java",
+            "arity": 7,
+            "line": "L843",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "toString",
+            "receiver_type": "Boolean",
+            "lang": "java",
+            "arity": 1,
+            "line": "L844",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "getEncoder",
+            "receiver_type": "Base64",
+            "lang": "java",
+            "arity": 0,
+            "line": "L845",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "write",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 5,
+            "line": "L847",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "move",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 4,
+            "line": "L849",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          },
+          {
+            "callee": "move",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 3,
+            "line": "L851",
+            "file": "src/com/jarvis/assist/JarvisApp.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "test_com_jarvis_assist_jarvisapptest",
+      "label": "JarvisAppTest.java",
+      "file_type": "code",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "test_com_jarvis_assist_jarvisapptest_jarvisapptest",
+      "label": "JarvisAppTest",
+      "file_type": "code",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L7",
+      "metadata": {
+        "type_path": "JarvisAppTest"
+      },
+      "_java_type": {
+        "path": "JarvisAppTest",
+        "package": "com.jarvis.assist",
+        "imports": [
+          "java.nio.file.Files",
+          "java.time.LocalDate",
+          "java.time.LocalDateTime"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "label": ".main()",
+      "file_type": "code",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L8",
+      "metadata": {
+        "arity": 1,
+        "signature": "String[]",
+        "unresolved_calls": [
+          {
+            "callee": "of",
+            "receiver_type": "LocalDateTime",
+            "lang": "java",
+            "arity": 5,
+            "line": "L9",
+            "file": "test/com/jarvis/assist/JarvisAppTest.java"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "LocalDate",
+            "lang": "java",
+            "arity": 3,
+            "line": "L11",
+            "file": "test/com/jarvis/assist/JarvisAppTest.java"
+          },
+          {
+            "callee": "createTempDirectory",
+            "receiver_type": "Files",
+            "lang": "java",
+            "arity": 1,
+            "line": "L15",
+            "file": "test/com/jarvis/assist/JarvisAppTest.java"
+          },
+          {
+            "callee": "resolve",
+            "receiver_type": "var",
+            "lang": "java",
+            "arity": 1,
+            "line": "L16",
+            "file": "test/com/jarvis/assist/JarvisAppTest.java"
+          }
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_check",
+      "label": ".check()",
+      "file_type": "code",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L41",
+      "metadata": {
+        "arity": 2,
+        "signature": "boolean,String"
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app",
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_state",
+      "label": "state",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_esc",
+      "label": "esc()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_updateclock",
+      "label": "updateClock()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_showpanel",
+      "label": "showPanel()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_toast",
+      "label": "toast()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_getstatus",
+      "label": "getStatus()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_render",
+      "label": "render()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_rendertranscript",
+      "label": "renderTranscript()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_renderreminders",
+      "label": "renderReminders()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_renderlogs",
+      "label": "renderLogs()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_sendcommand",
+      "label": "sendCommand()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_setmode",
+      "label": "setMode()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L16",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawambient",
+      "label": "drawAmbient()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawambient_resize",
+      "label": "resize()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawambient_circuit",
+      "label": "circuit()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawambient_frame",
+      "label": "frame()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawwave",
+      "label": "drawWave()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_drawwave_frame",
+      "label": "frame()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "web_app_coreparallax",
+      "label": "coreParallax()",
+      "file_type": "code",
+      "source_file": "web/app.js",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "com_sun_net_httpserver_httpexchange",
+      "label": "com.sun.net.httpserver.HttpExchange",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "com_sun_net_httpserver_httpserver",
+      "label": "com.sun.net.httpserver.HttpServer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "java_awt_event_windowevent",
+      "label": "java.awt.event.WindowEvent",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "java_nio_channels_filechannel",
+      "label": "java.nio.channels.FileChannel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "java_nio_channels_filelock",
+      "label": "java.nio.channels.FileLock",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "java_util_regex_pattern",
+      "label": "java.util.regex.Pattern",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "com_sun_net_httpserver_httpexchange",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "com_sun_net_httpserver_httpserver",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "audioformat",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "audiosystem",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "targetdataline",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "swing",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "awt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "windowadapter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "java_awt_event_windowevent",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "bufferedreader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "ioexception",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "inputstreamreader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "outputstream",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "inetsocketaddress",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "uri",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "java_nio_channels_filechannel",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "java_nio_channels_filelock",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "standardcharsets",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "file",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "datetimeformatter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "datetimeparseexception",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "formatstyle",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "list",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "util",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "executors",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "scheduledexecutorservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "timeunit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "matcher",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "java_util_regex_pattern",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "java_nio_channels_filechannel",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "java_nio_channels_filelock",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "trayicon",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "jframe",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "jtextarea",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "com_sun_net_httpserver_httpserver",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L55",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_conversation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L59",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_jarvisapp",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_acquirelock",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136_windowclosing",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136_windowclosing",
+      "target": "java_awt_event_windowevent",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L137",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136_windowclosing",
+      "target": "override",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L137",
+      "weight": 1.0,
+      "context": "attribute",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_showframe",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L176",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L193",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_confirmation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L240",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_confirmation",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L240",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_help",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L247",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_officecandidates",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L283",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startfirstfound",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L291",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startapproved",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L300",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L309",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L316",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startwebserver",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L321",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L333",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "com_sun_net_httpserver_httpexchange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L333",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_readbody",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L372",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_readbody",
+      "target": "com_sun_net_httpserver_httpexchange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L372",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L378",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "target": "com_sun_net_httpserver_httpexchange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L378",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_webroot",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L397",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L403",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "target": "com_sun_net_httpserver_httpexchange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L403",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L412",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_json",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L437",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_checkduereminders",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L456",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L468",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_voicescript",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L496",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L502",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startclaplistener",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L544",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L588",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L604",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_shutdown",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L622",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_makeicon",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L634",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_makeicon",
+      "target": "image",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L634",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L648",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L649",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L649",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_conversation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L661",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L663",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_carrot",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_clap",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_both",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L664",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_wakemode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L666",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsvoice",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L667",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsclap",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L668",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_parse",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L669",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_parse",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L669",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L680",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L682",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "java_util_regex_pattern",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L683",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "java_util_regex_pattern",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L684",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_commandparser",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L688",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L690",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L690",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_requiretext",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L716",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_parsetime",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L722",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L734",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L736",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_reminderstore",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L738",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L743",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L743",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_snapshot",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L748",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_snapshot",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L748",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_schedulefor",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L752",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_listall",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L766",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L780",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L780",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L789",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L789",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L789",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L801",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L801",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_load",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L822",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L840",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_jarvisapp",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_reminderstore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_jarvisapp",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_acquirelock",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startwebserver",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_shutdown",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_makeicon",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startui",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startclaplistener",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe_object_windowadapter_l136",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_buildframe",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_showframe",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L184",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_help",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L225",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_confirmation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L230",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startapproved",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L270",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startfirstfound",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L274",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_openapprovedapp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_officecandidates",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L280",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startfirstfound",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_startapproved",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L294",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L310",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L311",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_conversation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L317",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L337",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L337",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_readbody",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L341",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L347",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L348",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_json",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L350",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L366",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_webroot",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L379",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servestatic",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_send",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L383",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_json",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L417",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_voicescript",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L469",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startvoicelistener",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L483",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L515",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L518",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_append",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L521",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L524",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_processcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L537",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_startclaplistener",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L573",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_recordconversation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L595",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_opendashboard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L597",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_speak",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L598",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L657",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_parsetime",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L694",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L696",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_requiretext",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L696",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_reminderstore",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_load",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L740",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L745",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L785",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L794",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L797",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L813",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_save",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L818",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_reminderstore_load",
+      "target": "src_com_jarvis_assist_jarvisapp_reminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L830",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest",
+      "target": "files",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest",
+      "target": "localdate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest",
+      "target": "localdatetime",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest",
+      "target": "test_com_jarvis_assist_jarvisapptest_jarvisapptest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest",
+      "target": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest",
+      "target": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_check",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_check",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_esc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_updateclock",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_showpanel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_toast",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_getstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_render",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_rendertranscript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_renderreminders",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_renderlogs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_sendcommand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_setmode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_drawambient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient",
+      "target": "web_app_drawambient_resize",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient",
+      "target": "web_app_drawambient_circuit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient",
+      "target": "web_app_drawambient_frame",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_drawwave",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawwave",
+      "target": "web_app_drawwave_frame",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_coreparallax",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_getstatus",
+      "target": "web_app_render",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_render",
+      "target": "web_app_rendertranscript",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_render",
+      "target": "web_app_renderreminders",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_render",
+      "target": "web_app_renderlogs",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_rendertranscript",
+      "target": "web_app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_renderreminders",
+      "target": "web_app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_renderreminders",
+      "target": "web_app_sendcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_renderlogs",
+      "target": "web_app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_sendcommand",
+      "target": "web_app_toast",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_sendcommand",
+      "target": "web_app_getstatus",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_setmode",
+      "target": "web_app_getstatus",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_setmode",
+      "target": "web_app_toast",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient",
+      "target": "web_app_drawambient_resize",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient",
+      "target": "web_app_drawambient_frame",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawambient_frame",
+      "target": "web_app_drawambient_circuit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app_drawwave",
+      "target": "web_app_drawwave_frame",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_showpanel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_setmode",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_sendcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/app.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_updateclock",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "web/app.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "web_app",
+      "target": "web_app_getstatus",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "web/app.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_arguments_parse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_main",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_schedulefor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_listall",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L209",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L213",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L227",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L229",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_servehttp",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_parse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L355",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_statusjson",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_snapshot",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L420",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_checkduereminders",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_dueat",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L459",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_receivevoice",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsvoice",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L512",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_com_jarvis_assist_jarvisapp_jarvisapp_registerclap",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_wakemode_allowsclap",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/com/jarvis/assist/JarvisApp.java",
+      "source_location": "L589",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_commandparser_parsereminder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_add",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_schedulefor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_listall",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_snooze",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_reminderstore_delete",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "test_com_jarvis_assist_jarvisapptest_jarvisapptest_main",
+      "target": "src_com_jarvis_assist_jarvisapp_jarvisapp_handle",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "test/com/jarvis/assist/JarvisAppTest.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "skipped_sources": [],
+  "extracted_sources": [
+    "D:\\java jarvis\\build.ps1",
+    "D:\\java jarvis\\scripts\\install-startup.ps1",
+    "D:\\java jarvis\\scripts\\voice-listener.ps1",
+    "D:\\java jarvis\\src\\com\\jarvis\\assist\\JarvisApp.java",
+    "D:\\java jarvis\\test\\com\\jarvis\\assist\\JarvisAppTest.java",
+    "D:\\java jarvis\\web\\app.js"
+  ]
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b0c">
+  <title>Carrot · Local AI Assistant</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+  <div class="scanline" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topbar">
+      <button class="brand nav-trigger" data-panel="home" aria-label="Carrot home">
+        <span class="brand-mark"><i></i><i></i><i></i></span><span>CARROT</span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <button class="nav-item active" data-panel="home">HOME</button>
+        <button class="nav-item" data-panel="tasks">TASKS</button>
+        <button class="nav-item" data-panel="memory">MEMORY</button>
+        <button class="nav-item" data-panel="system">SYSTEM</button>
+        <button class="nav-item" data-panel="reminders">REMINDERS</button>
+        <button class="nav-item" data-panel="logs">LOGS</button>
+        <button class="nav-item" data-panel="settings">SETTINGS</button>
+      </nav>
+      <div class="clock"><strong id="clock">--:--</strong><span id="date">---</span></div>
+    </header>
+
+    <section class="dashboard" id="homePanel">
+      <aside class="status-rail" aria-label="System status">
+        <div class="status-item online">
+          <span class="status-icon power-icon"></span>
+          <div><small>SYSTEM</small><strong>ONLINE</strong></div>
+        </div>
+        <div class="status-item" id="voiceStatusItem">
+          <span class="status-icon mic-icon"></span>
+          <div><small>VOICE</small><strong id="voiceStatus">STARTING</strong></div>
+        </div>
+        <div class="status-item online">
+          <span class="status-icon stack-icon"></span>
+          <div><small>LOCAL BACKEND</small><strong>CONNECTED</strong></div>
+        </div>
+        <button class="status-item reminder-link" data-panel="reminders">
+          <span class="status-icon bell-icon"></span>
+          <div><small>REMINDERS</small><strong id="reminderCount">0</strong></div>
+        </button>
+      </aside>
+
+      <section class="core-column" aria-label="Carrot assistant core">
+        <div class="core-stage" id="coreStage">
+          <div class="halo halo-a"></div><div class="halo halo-b"></div><div class="halo halo-c"></div>
+          <div class="orbit orbit-a"><i></i><i></i></div>
+          <div class="orbit orbit-b"><i></i></div>
+          <div class="energy-sphere">
+            <div class="sphere-shine"></div>
+            <svg class="carrot-core" viewBox="0 0 240 330" role="img" aria-label="Glowing geometric carrot core">
+              <defs>
+                <linearGradient id="carrotFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0ce"/><stop offset=".22" stop-color="#ffb26b"/><stop offset=".58" stop-color="#ef6b2f"/><stop offset="1" stop-color="#8f2f13"/></linearGradient>
+                <filter id="carrotGlow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <g filter="url(#carrotGlow)" stroke="#ffd29b" stroke-width="3" stroke-linejoin="round">
+                <path d="M119 80 L64 113 L120 310 L178 113 Z" fill="url(#carrotFill)"/>
+                <path d="M120 80 L93 19 L119 4 L135 72 Z" fill="#ff9b54"/>
+                <path d="M105 85 L50 43 L67 22 L125 78 Z" fill="#d9632e"/>
+                <path d="M135 84 L178 42 L197 64 L151 102 Z" fill="#e77739"/>
+                <path d="M64 113 L178 113 L123 151 Z M123 151 L178 113 L158 192 Z M123 151 L158 192 L104 210 Z M104 210 L158 192 L120 310 Z" fill="none" opacity=".8"/>
+                <path d="M64 113 L123 151 L104 210 Z M64 113 L104 210 L86 184 Z" fill="none" opacity=".58"/>
+              </g>
+            </svg>
+            <span class="core-line line-a"></span><span class="core-line line-b"></span><span class="core-line line-c"></span>
+          </div>
+        </div>
+        <h1>CARROT</h1>
+        <p class="wake-copy"><span></span>SAY <b>CARROT</b> TO BEGIN<span></span></p>
+      </section>
+
+      <aside class="interaction-rail" aria-label="Assistant interaction">
+        <div class="wake-control">
+          <span>WAKE MODE</span>
+          <div class="segmented" role="group" aria-label="Wake mode">
+            <button data-mode="carrot" class="active">CARROT</button><button data-mode="both">BOTH</button><button data-mode="clap">CLAP</button>
+          </div>
+        </div>
+        <div class="transcript" id="transcript" aria-live="polite"></div>
+        <p class="live-caption" id="liveCaption">MICROPHONE ARMED · SAY CARROT</p>
+        <canvas id="waveform" width="640" height="116" aria-label="Voice activity waveform"></canvas>
+        <form id="commandForm" class="command-form">
+          <label for="commandInput">TYPE A COMMAND</label>
+          <input id="commandInput" autocomplete="off" maxlength="500" placeholder="e.g. remind me tomorrow at 9 am to call John">
+          <button type="submit" aria-label="Send command"><span>➤</span></button>
+        </form>
+        <p class="hint" id="hint">Try “today”, “list reminders”, or “open PowerPoint”</p>
+      </aside>
+    </section>
+
+    <section class="workspace-panel" id="tasksPanel" aria-labelledby="tasksTitle">
+      <div class="panel-heading"><div><span>PERSISTENT WORK QUEUE</span><h2 id="tasksTitle">TASKS</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="reminder-grid" id="taskGrid"></div>
+    </section>
+
+    <section class="workspace-panel" id="memoryPanel" aria-labelledby="memoryTitle">
+      <div class="panel-heading"><div><span>USER-APPROVED LOCAL CONTEXT</span><h2 id="memoryTitle">MEMORY</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="reminder-grid" id="memoryGrid"></div>
+    </section>
+
+    <section class="workspace-panel" id="systemPanel" aria-labelledby="systemTitle">
+      <div class="panel-heading"><div><span>LIVE WINDOWS TELEMETRY</span><h2 id="systemTitle">SYSTEM</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="telemetry-grid">
+        <article><span>CPU LOAD</span><strong id="cpuMetric">--</strong><i><b id="cpuBar"></b></i></article>
+        <article><span>MEMORY</span><strong id="memoryMetric">--</strong><i><b id="memoryBar"></b></i></article>
+        <article><span>SYSTEM DISK</span><strong id="diskMetric">--</strong><i><b id="diskBar"></b></i></article>
+        <article><span>UPTIME</span><strong id="uptimeMetric">--</strong></article>
+        <article><span>PROCESSES</span><strong id="processMetric">--</strong></article>
+        <article><span>NETWORK</span><strong id="networkMetric">--</strong></article>
+      </div>
+    </section>
+
+    <section class="workspace-panel" id="remindersPanel" aria-labelledby="remindersTitle">
+      <div class="panel-heading"><div><span>LOCAL SCHEDULE</span><h2 id="remindersTitle">REMINDERS</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="reminder-grid" id="reminderGrid"></div>
+    </section>
+
+    <section class="workspace-panel" id="logsPanel" aria-labelledby="logsTitle">
+      <div class="panel-heading"><div><span>SESSION ACTIVITY</span><h2 id="logsTitle">COMMAND LOG</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="log-list" id="logList"></div>
+    </section>
+
+    <section class="workspace-panel" id="settingsPanel" aria-labelledby="settingsTitle">
+      <div class="panel-heading"><div><span>LOCAL CONFIGURATION</span><h2 id="settingsTitle">SETTINGS</h2></div><button class="close-panel" data-panel="home">CLOSE ×</button></div>
+      <div class="settings-layout">
+        <div><h3>WAKE BEHAVIOUR</h3><p>Choose how Carrot waits for you. “Both” keeps the Carrot voice wake word and double-clap detection active.</p></div>
+        <div class="mode-cards">
+          <button data-mode="carrot" class="active"><strong>CARROT</strong><span>Primary voice wake word</span></button>
+          <button data-mode="both"><strong>BOTH</strong><span>Voice + double clap</span></button>
+          <button data-mode="clap"><strong>DOUBLE CLAP</strong><span>Sound wake only</span></button>
+        </div>
+        <div class="privacy-note"><strong>LOCAL BY DESIGN</strong><p>Commands, speech recognition, and reminder data stay on this Windows PC.</p></div>
+        <div class="provider-note"><strong>LOCAL AI PROVIDER</strong><p id="providerStatus">Checking Ollama…</p></div>
+        <div class="control-row"><button data-control="wake">WAKE</button><button data-control="sleep">SLEEP</button><button class="danger" data-control="shutdown">SHUTDOWN VOICE</button></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -34,12 +34,26 @@ Register-ObjectEvent -InputObject $recognizer -EventName SpeechRecognized -Actio
             $hasWakeWord = $true
         }
     }
-    $minimumConfidence = if ($hasWakeWord) { 0.28 } else { 0.42 }
+    $minimumConfidence = if ($hasWakeWord) { 0.25 } else { 0.30 }
     if ($result.Confidence -ge $minimumConfidence -or $hasWakeWord) {
         $bytes = [Text.Encoding]::UTF8.GetBytes($text)
         [Console]::Out.WriteLine('VOICE:' + [Convert]::ToBase64String($bytes))
         [Console]::Out.Flush()
     }
+} | Out-Null
+
+Register-ObjectEvent -InputObject $recognizer -EventName SpeechHypothesized -Action {
+    $text = $Event.SourceEventArgs.Result.Text
+    if ($text) {
+        $bytes = [Text.Encoding]::UTF8.GetBytes($text)
+        [Console]::Out.WriteLine('PARTIAL:' + [Convert]::ToBase64String($bytes))
+        [Console]::Out.Flush()
+    }
+} | Out-Null
+
+Register-ObjectEvent -InputObject $recognizer -EventName SpeechDetected -Action {
+    [Console]::Out.WriteLine('DETECTED')
+    [Console]::Out.Flush()
 } | Out-Null
 
 $recognizer.RecognizeAsync([System.Speech.Recognition.RecognizeMode]::Multiple)

@@ -34,7 +34,20 @@ public final class JarvisAppTest {
         check(app.handle("Jarvis", now).equals("Yes?"), "wake-word name");
         check(app.handle("Carrot, today", now).contains("Nothing is scheduled"), "named command prefix");
         check(app.handle("what time is it", now).contains("10:00"), "time command");
+        check(app.handle("What's the time?", now).contains("10:00"), "punctuated voice synonym");
         check(app.handle("what is today's date", now).contains("2026"), "date command");
+        check(app.handle("remember that my project is Carrot", now).contains("I'll remember"), "remember command");
+        check(app.handle("what do you remember about me", now).contains("Carrot"), "memory retrieval");
+        check(app.handle("forget memory 1", now).contains("Forgot"), "forget command");
+        check(app.handle("add task test the local assistant", now).contains("Task added"), "add task");
+        check(app.handle("list tasks", now).contains("test the local assistant"), "list tasks");
+        check(app.handle("complete task 1", now).contains("Completed"), "complete task");
+        check(app.handle("delete task 1", now).contains("Deleted"), "delete task");
+        check(OllamaClient.jsonString("{\"response\":\"hello\\nworld\"}", "response").equals("hello\nworld"), "Ollama JSON parser");
+        SystemTelemetry.Snapshot telemetry = new SystemTelemetry().read();
+        check(telemetry.cpuPercent() >= 0 && telemetry.memoryPercent() >= 0 && telemetry.processCount() > 0, "real telemetry");
+        check(app.handle("go to sleep", now).contains("Going to sleep"), "sleep command");
+        check(app.handle("wake up carrot", now).contains("awake"), "wake command");
         System.out.println("All Carrot tests passed.");
     }
 
