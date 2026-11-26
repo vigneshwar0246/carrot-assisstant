@@ -154,7 +154,7 @@ public final class JarvisApp {
             startWhisperService();
             startVoiceListener();
             startClapListener();
-            ollama.warmAsync();
+            ollama.checkAsync();
             trayIcon.displayMessage("Carrot", "Online. Say Carrot or click the tray icon. Clap wake is optional in Settings.",
                     TrayIcon.MessageType.INFO);
         } catch (AWTException | IOException e) {
@@ -212,11 +212,23 @@ public final class JarvisApp {
         if (!force && now - lastDashboardOpen < 10_000) return;
         lastDashboardOpen = now;
         if (!force) dashboardAutoOpened = true;
+        ollama.warmAsync();
         try {
             Desktop.getDesktop().browse(URI.create("http://127.0.0.1:" + webPort + "/"));
         } catch (IOException e) {
             showFrame();
         }
+    }
+
+    private synchronized void enterDormantMode() {
+        conversationActive = false;
+        voiceAwakeUntil = 0;
+        liveTranscript = "";
+        dashboardAutoOpened = false;
+        lastDashboardOpen = 0;
+        if (!voiceStatus.equals("SHUTDOWN")) voiceStatus = "ARMED";
+        ollama.sleepAsync();
+        audit.write("control", "dashboard-closed-dormant", true);
     }
 
     private void append(String speaker, String text) {
@@ -230,7 +242,7 @@ public final class JarvisApp {
         normalized = normalized.replaceFirst("(?i)^(jarvis|carrot)\\b\\s*,?\\s*", "");
         try {
             if (normalized.matches("(?i)(wake up|wake up carrot|resume listening)")) {
-                conversationActive = true; voiceStatus = "LISTENING"; audit.write("control", "wake", true); return "I'm awake and listening.";
+                conversationActive = true; voiceStatus = "LISTENING"; ollama.warmAsync(); audit.write("control", "wake", true); return "I'm awake and listening.";
             }
             if (voiceStatus.equals("SHUTDOWN")) return "Carrot is shut down. Use the Wake control in Settings.";
             if (normalized.matches("(?i)(go to sleep|sleep|stop listening)")) {
@@ -454,6 +466,9 @@ public final class JarvisApp {
                 String action=readBody(exchange);String command=switch(action.toLowerCase(Locale.ROOT)){case "wake"->"wake up carrot";case "sleep"->"go to sleep";case "shutdown","emergency-stop"->"shutdown carrot";default->throw new IllegalArgumentException("Invalid control action");};
                 String response=processCommand(command);send(exchange,200,"application/json; charset=utf-8","{\"response\":\""+json(response)+"\"}");return;
             }
+            if(path.equals("/api/dormant")&&exchange.getRequestMethod().equals("POST")){
+                enterDormantMode();send(exchange,200,"application/json; charset=utf-8","{\"dormant\":true}");return;
+            }
             if (!exchange.getRequestMethod().equals("GET")) {
                 send(exchange, 405, "text/plain; charset=utf-8", "Method not allowed");
                 return;
@@ -524,6 +539,7 @@ public final class JarvisApp {
             Reminder r = reminders.get(i);
             if (i > 0) reminderJson.append(',');
             reminderJson.append("{\"number\":").append(i + 1).append(",\"daily\":").append(r.daily())
+                    .append(",\"fired\":").append(!r.daily() && r.lastFired() != null)
                     .append(",\"date\":").append(r.date() == null ? "null" : "\"" + r.date() + "\"")
                     .append(",\"time\":\"").append(r.time()).append("\",\"text\":\"")
                     .append(json(r.text())).append("\"}");
@@ -569,11 +585,45 @@ public final class JarvisApp {
             LocalDateTime now = LocalDateTime.now();
             for (Reminder reminder : store.dueAt(now)) {
                 lastNotified = reminder;
-                SwingUtilities.invokeLater(() -> trayIcon.displayMessage("Reminder", reminder.text(), TrayIcon.MessageType.INFO));
+                recordConversation("assistant", "Reminder: " + reminder.text());
+                SwingUtilities.invokeLater(() -> showReminderPopup(reminder));
             }
         } catch (Exception e) {
             System.err.println("Reminder check failed: " + e.getMessage());
         }
+    }
+
+    private void showReminderPopup(Reminder reminder) {
+        Toolkit.getDefaultToolkit().beep();
+        trayIcon.displayMessage("Carrot Reminder", reminder.text(), TrayIcon.MessageType.INFO);
+        JDialog dialog = new JDialog((Frame) null, "Carrot Reminder", false);
+        dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        dialog.setAlwaysOnTop(true);
+
+        JLabel heading = new JLabel("REMINDER");
+        heading.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 14));
+        heading.setForeground(new Color(220, 92, 42));
+        JTextArea message = new JTextArea(reminder.text(), 3, 34);
+        message.setEditable(false);
+        message.setLineWrap(true);
+        message.setWrapStyleWord(true);
+        message.setOpaque(false);
+        message.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 17));
+        JButton dismiss = new JButton("Dismiss ×");
+        dismiss.addActionListener(e -> dialog.dispose());
+
+        JPanel content = new JPanel(new BorderLayout(12, 12));
+        content.setBorder(BorderFactory.createEmptyBorder(18, 20, 16, 20));
+        content.add(heading, BorderLayout.NORTH);
+        content.add(message, BorderLayout.CENTER);
+        JPanel actions = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
+        actions.add(dismiss);
+        content.add(actions, BorderLayout.SOUTH);
+        dialog.setContentPane(content);
+        dialog.pack();
+        dialog.setLocationRelativeTo(null);
+        dialog.setVisible(true);
+        dialog.toFront();
     }
 
     private void startWhisperService() {
@@ -1028,20 +1078,26 @@ public final class JarvisApp {
 record Reminder(UUID id, boolean daily, LocalDate date, LocalTime time, String text, LocalDate lastFired) { }
 
 final class CommandParser {
-    private static final Pattern DAILY = Pattern.compile("(?i)(?:daily at (.+?) remind me to|remind me daily at (.+?) to) (.+)");
-    private static final Pattern ONCE = Pattern.compile("(?i)remind me (?:(today|tomorrow)|on (\\d{4}-\\d{2}-\\d{2}))? ?at (.+?) to (.+)");
+    private static final Pattern DAILY_LEADING = Pattern.compile("(?i)daily at (.+?) remind me (?:to|about) (.+)");
+    private static final Pattern DAILY = Pattern.compile("(?i)(?:remind me|set(?: a)? reminder) (?:daily|every day) at (.+?) (?:to|for|that) (.+)");
+    private static final Pattern ONCE = Pattern.compile("(?i)(?:remind me|set(?: a)? reminder)(?: (today|tomorrow)| on (\\d{4}-\\d{2}-\\d{2}))? (?:at|for) (.+?) (?:to|for|that) (.+)");
     private static final DateTimeFormatter TIME_12 = DateTimeFormatter.ofPattern("h:mm a", Locale.ENGLISH);
     private static final DateTimeFormatter TIME_12_HOUR = DateTimeFormatter.ofPattern("h a", Locale.ENGLISH);
 
     private CommandParser() { }
 
     static Reminder parseReminder(String command, LocalDateTime now) {
+        Matcher leadingDaily = DAILY_LEADING.matcher(command);
+        if (leadingDaily.matches()) {
+            LocalTime time = parseTime(leadingDaily.group(1));
+            LocalDate alreadyPassedToday = time.isAfter(now.toLocalTime()) ? null : now.toLocalDate();
+            return new Reminder(UUID.randomUUID(), true, null, time, requireText(leadingDaily.group(2)), alreadyPassedToday);
+        }
         Matcher daily = DAILY.matcher(command);
         if (daily.matches()) {
-            String rawTime = daily.group(1) != null ? daily.group(1) : daily.group(2);
-            LocalTime time = parseTime(rawTime);
+            LocalTime time = parseTime(daily.group(1));
             LocalDate alreadyPassedToday = time.isAfter(now.toLocalTime()) ? null : now.toLocalDate();
-            return new Reminder(UUID.randomUUID(), true, null, time, requireText(daily.group(3)), alreadyPassedToday);
+            return new Reminder(UUID.randomUUID(), true, null, time, requireText(daily.group(2)), alreadyPassedToday);
         }
         Matcher once = ONCE.matcher(command);
         if (!once.matches()) return null;
@@ -1068,10 +1124,26 @@ final class CommandParser {
     }
 
     private static LocalTime parseTime(String raw) {
-        String value = raw.trim().toUpperCase(Locale.ENGLISH).replaceAll("\\s+", " ");
+        String value = raw.trim().toUpperCase(Locale.ENGLISH).replace(".", "")
+                .replaceAll("\\s+", " ").replaceAll("^(\\d{1,2}) (\\d{2}) ([AP]M)$", "$1:$2 $3")
+                .replaceAll("(\\d)([AP]M)$", "$1 $2");
+        if (value.equals("NOON")) return LocalTime.NOON;
+        if (value.equals("MIDNIGHT")) return LocalTime.MIDNIGHT;
+        Map<String, String> spokenHours = Map.ofEntries(
+                Map.entry("ONE", "1"), Map.entry("TWO", "2"), Map.entry("THREE", "3"),
+                Map.entry("FOUR", "4"), Map.entry("FIVE", "5"), Map.entry("SIX", "6"),
+                Map.entry("SEVEN", "7"), Map.entry("EIGHT", "8"), Map.entry("NINE", "9"),
+                Map.entry("TEN", "10"), Map.entry("ELEVEN", "11"), Map.entry("TWELVE", "12"));
+        for (Map.Entry<String, String> hour : spokenHours.entrySet()) {
+            if (value.startsWith(hour.getKey() + " ")) {
+                value = hour.getValue() + value.substring(hour.getKey().length());
+                break;
+            }
+        }
         try {
             if (value.matches("\\d{1,2}:\\d{2} [AP]M")) return LocalTime.parse(value, TIME_12);
             if (value.matches("\\d{1,2} [AP]M")) return LocalTime.parse(value, TIME_12_HOUR);
+            if (value.matches("\\d{1,2}")) return LocalTime.of(Integer.parseInt(value), 0);
             return LocalTime.parse(value, DateTimeFormatter.ofPattern("H:mm"));
         } catch (DateTimeParseException e) {
             throw new IllegalArgumentException("Use a time like 6:30 pm or 18:30.");
@@ -1151,17 +1223,13 @@ final class ReminderStore {
         List<Reminder> due = reminders.stream().filter(r -> {
                     LocalDateTime occurrence = LocalDateTime.of(r.daily() ? date : r.date(), r.time());
                     return !occurrence.isAfter(now)
-                            && (r.daily() ? !date.equals(r.lastFired()) : true);
+                            && (r.daily() ? !date.equals(r.lastFired()) : r.lastFired() == null);
                 })
                 .toList();
         if (due.isEmpty()) return due;
         for (Reminder r : due) {
-            if (r.daily()) {
-                int index = reminders.indexOf(r);
-                reminders.set(index, new Reminder(r.id(), true, null, r.time(), r.text(), date));
-            } else {
-                reminders.remove(r);
-            }
+            int index = reminders.indexOf(r);
+            reminders.set(index, new Reminder(r.id(), r.daily(), r.date(), r.time(), r.text(), date));
         }
         save();
         return due;

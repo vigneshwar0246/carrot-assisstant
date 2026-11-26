@@ -11,6 +11,10 @@ public final class JarvisAppTest {
         check(once.date().equals(LocalDate.of(2026, 11, 27)) && once.time().getHour() == 18, "one-time parse");
         Reminder daily = CommandParser.parseReminder("daily at 8:00 am remind me to take vitamins", now);
         check(daily.daily() && daily.time().getHour() == 8 && daily.lastFired().equals(now.toLocalDate()), "daily parse");
+        Reminder spoken = CommandParser.parseReminder("set a reminder for seven p.m. to test the popup", now);
+        check(spoken.time().getHour() == 19 && spoken.text().equals("test the popup"), "spoken reminder parse");
+        Reminder everyDay = CommandParser.parseReminder("remind me every day at 9 am to stretch", now);
+        check(everyDay.daily() && everyDay.time().getHour() == 9, "natural daily parse");
 
         var dir = Files.createTempDirectory("jarvis-test-");
         var file = dir.resolve("reminders.tsv");
@@ -25,6 +29,12 @@ public final class JarvisAppTest {
         check(snoozed.date().equals(now.toLocalDate()) && snoozed.time().equals(now.toLocalTime().plusMinutes(10)), "snooze");
         Reminder removed = restarted.delete(3);
         check(removed.text().equals("call home") && !restarted.listAll().contains("3."), "delete reminder");
+        var firedFile = dir.resolve("fired-reminders.tsv");
+        ReminderStore firedStore = new ReminderStore(firedFile);
+        firedStore.add(CommandParser.parseReminder("remind me at 10:01 am to test persistence", now));
+        check(firedStore.dueAt(now.plusMinutes(2)).size() == 1, "due reminder fires");
+        check(firedStore.snapshot().size() == 1 && firedStore.snapshot().get(0).lastFired() != null, "fired reminder retained");
+        check(new ReminderStore(firedFile).snapshot().size() == 1, "fired reminder restart persistence");
 
         JarvisApp app = new JarvisApp(dir.resolve("commands"));
         check(app.handle("remind me tomorrow at 6 pm to test commands", now).startsWith("Saved reminder"), "add command");

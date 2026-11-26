@@ -17,12 +17,28 @@ final class OllamaClient {
     String model() { return model; }
     boolean available() { return available; }
 
+    void checkAsync() {
+        CompletableFuture.runAsync(this::health);
+    }
+
     void warmAsync() {
         CompletableFuture.runAsync(() -> {
             try {
                 available = health();
                 if (available) generate("Reply only with: ready", 2);
             } catch (Exception ignored) { available = false; }
+        });
+    }
+
+    void sleepAsync() {
+        CompletableFuture.runAsync(() -> {
+            try {
+                String body = "{\"model\":\"" + escape(model) + "\",\"keep_alive\":0}";
+                HttpRequest request = HttpRequest.newBuilder(URI.create(baseUrl + "/api/generate"))
+                        .timeout(Duration.ofSeconds(10)).header("Content-Type", "application/json")
+                        .POST(HttpRequest.BodyPublishers.ofString(body)).build();
+                http.send(request, HttpResponse.BodyHandlers.discarding());
+            } catch (Exception ignored) { }
         });
     }
 

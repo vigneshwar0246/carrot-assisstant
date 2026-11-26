@@ -30,6 +30,10 @@ Carrot starts in the system tray, serves its command-center frontend locally at 
 
 Closing the command window leaves Carrot running. Use the tray menu's **Exit** item to stop it.
 
+Closing the browser dashboard puts Carrot into dormant mode: the active conversation stops and Ollama unloads from memory. Only the lightweight tray process, wake detector, and reminder scheduler remain so saying **“Carrot”** can open a fresh dashboard and scheduled reminders can still fire. Use the tray menu's **Exit** item when you want to stop Carrot completely.
+
+Due reminders show both a Windows notification and an always-on-top **Carrot Reminder** window. That window does not time out; close it with its title-bar X or **Dismiss ×**. One-time reminders remain visible in the Reminders panel as `FIRED` until you delete them.
+
 ## Build and startup
 
 For a clean installation, run `powershell -ExecutionPolicy Bypass -File .\scripts\install-whisper.ps1` once. Then run `powershell -ExecutionPolicy Bypass -File .\build.ps1` and `powershell -ExecutionPolicy Bypass -File .\scripts\install-startup.ps1`. The packaged app includes its own Java runtime. The speech environment and model are cached under `%LOCALAPPDATA%\Carrot`; the startup shortcut is installed in your personal Windows Startup folder.
